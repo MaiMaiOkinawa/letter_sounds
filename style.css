@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Barlow+Condensed&family=Chivo+Mono&family=Inconsolata&family=Jost:wght@400;700&family=Montserrat&family=Mulish:wght@200;400&family=Patrick+Hand&family=Roboto:ital,wght@0,400;0,700;1,400&family=Sono&family=Space+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-transform: lowercase;
-  font-family: "Jost", sans-serif;
+  font-family: "Quicksand", sans-serif;
   background: var(--primary-green);
 }
 
@@ -20,7 +20,6 @@
 .container {
   margin: 0 auto;
   position: relative;
-  width: 80vw;
   min-height: 100vh;
 }
 
@@ -28,8 +27,8 @@
   color: var(--primary-black);
   text-align: center;
   padding: 2.5rem;
-  font-size: 3rem;
-  font-weight: bold;
+  font-size: 3.5rem;
+  font-weight: bolder;
 }
 
 .container .video-container {
@@ -43,7 +42,7 @@
 .container .video-container .video {
   width: 21.875rem;
   height: 15.625rem;
-  border: 0.3rem solid var(--primary-yellow);
+  border: 0.5rem solid var(--primary-yellow);
   border-radius: 0.5rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
   cursor: pointer;
@@ -57,8 +56,16 @@
   transition: 0.2s linear;
 }
 
-.container .video-container .video:hover {
-  transform: scale(1.1);
+.container .video-container .video:nth-child(even):hover {
+  /* transform: scale(1.1); */
+  transform: scale(1.1) rotate(5deg);
+  transition: 0.4s ease;
+}
+
+.container .video-container .video:nth-child(odd):hover {
+  /* transform: scale(1.1); */
+  transform: scale(1.1) rotate(-5deg);
+  transition: 0.4s ease-in-out;
 }
 
 .container .popup-video {
@@ -79,7 +86,7 @@
   transform: translate(-50%, -50%);
   width: 45rem;
   border-radius: 0.5rem;
-  border: 0.2rem solid var(--primary-yellow);
+  border: 0.5rem solid var(--primary-yellow);
   object-fit: cover;
 }
 
