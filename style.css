@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Barlow+Condensed&family=Chivo+Mono&family=Inconsolata&family=Jost:wght@400;700&family=Montserrat&family=Mulish:wght@200;400&family=Patrick+Hand&family=Roboto:ital,wght@0,400;0,700;1,400&family=Sono&family=Space+Mono&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: lowercase;
+  font-family: "Jost", sans-serif;
+  background: var(--primary-green);
+}
+
+:root {
+  --primary-yellow: #f8ff1c;
+  --primary-green: #50ffaf;
+  --primary-pink: #ff00f6;
+  --primary-purple: #9723c9;
+  --primary-black: #000000;
+}
+
+.container {
+  margin: 0 auto;
+  position: relative;
+  width: 80vw;
+  min-height: 100vh;
+}
+
+.container h1 {
+  color: var(--primary-black);
+  text-align: center;
+  padding: 2.5rem;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.container .video-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.3rem;
+  justify-content: center;
+  padding: 0.6rem;
+}
+
+.container .video-container .video {
+  width: 21.875rem;
+  height: 15.625rem;
+  border: 0.3rem solid var(--primary-yellow);
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.container .video-container .video video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: 0.2s linear;
+}
+
+.container .video-container .video:hover {
+  transform: scale(1.1);
+}
+
+.container .popup-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.8);
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+
+.container .popup-video video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 45rem;
+  border-radius: 0.5rem;
+  border: 0.2rem solid var(--primary-yellow);
+  object-fit: cover;
+}
+
+.container .popup-video span {
+  position: absolute;
+  top: 0.5rem;
+  right: 1.25rem;
+  font-size: 3rem;
+  color: var(--primary-pink);
+  z-index: 1000;
+  cursor: pointer;
+  background: none;
+}
+
+@media (max-width: 768px) {
+  .container .popup-video video {
+    width: 95%;
+  }
+}
