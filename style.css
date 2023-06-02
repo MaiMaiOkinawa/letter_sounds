@@ -54,6 +54,20 @@
   width: 100%;
   object-fit: cover;
   transition: 0.2s linear;
+  background-color: #ff00f6;
+}
+
+.overlayText {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  z-index: 1000;
+}
+
+#topText {
+  color: white;
+  font-size: 20px;
+  align-self: center;
 }
 
 .container .video-container .video:nth-child(even):hover {
